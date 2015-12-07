@@ -1,7 +1,3 @@
-#include <iostream>
+#include "md5SumGenerator.hpp"
 
-int main()
-{
-  
-
-}
+int main() {}
