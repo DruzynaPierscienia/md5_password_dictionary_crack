@@ -2,7 +2,9 @@ include_directories(${CMAKE_SOURCE_DIR}/include)
 
 add_library( md5_library
 	     md5HashedPasswordsReader.cpp
-	     md5SumGenerator.cpp )
+	     md5SumGenerator.cpp
+	     passwordBreaker.cpp
+)
 
 add_executable ( ${PROJ_NAME}
 	       main.cpp )   
