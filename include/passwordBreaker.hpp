@@ -3,7 +3,6 @@
 #include "md5SumGenerator.hpp"
 
 #include <string>
-#include <functional>
 
 class passwordBreaker :md5SumGenerator {
  public:

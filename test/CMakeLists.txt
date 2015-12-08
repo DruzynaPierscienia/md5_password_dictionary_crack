@@ -6,20 +6,26 @@ set( PROJ_TEST_NAME      "runUnitTests" )
 
 include_directories( ${CMAKE_SOURCE_DIR}/src
 		     ${CMAKE_SOURCE_DIR}/include
-		     ${GTEST_INCLUDE_DIR}
+		     ${GTEST_INCLUDE_DIRS}
+		     ${GMOCK_INCLUDE_DIRS}
 		    )
 
 add_executable( ${PROJ_TEST_NAME}
+		algorithmPasswordBreakerTest.cpp
 		md5SumGeneratorTest.cpp
 		passwordBreakerTest.cpp
 		main.cpp
 )
 
 target_link_libraries( ${PROJ_TEST_NAME}
-		       md5_library
-		       -lgtest
+		       ${LIBRARY_NAME}
+		       ${GTEST_BOTH_LIBRARIES}
+		       ${GMOCK_LIBRARIES}
 		       -lcrypto
 		       -lpthread
+		       -lgtest
+		       -lgmock
+		       -pthread
 )
 
 set_target_properties( ${PROJ_TEST_NAME} PROPERTIES RUNTIME_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR}/build )

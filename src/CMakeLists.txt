@@ -1,7 +1,10 @@
 include_directories(${CMAKE_SOURCE_DIR}/include)
 
-add_library( md5_library
-	     md5HashedPasswordsReader.cpp
+set(LIBRARY_NAME md5_library)
+
+add_library( ${LIBRARY_NAME}
+	     algorithmPasswordBreaker.cpp
+	     dictionaryPasswordsSource.cpp
 	     md5SumGenerator.cpp
 	     passwordBreaker.cpp
 )
@@ -9,12 +12,12 @@ add_library( md5_library
 add_executable ( ${PROJ_NAME}
 	       main.cpp )   
 
-target_link_libraries( md5_library
+target_link_libraries( ${LIBRARY_NAME}
 		       -lcrypto 
 		       )
 		       
 target_link_libraries( ${PROJ_NAME}
-		       md5_library
+		       ${LIBRARY_NAME}
 		       )
 
 set_target_properties( ${PROJ_NAME} PROPERTIES RUNTIME_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR}/build )
