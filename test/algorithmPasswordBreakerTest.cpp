@@ -30,8 +30,8 @@ std::string passwordsSourceMock::getPassword() {
 }
 
 TEST (algorithmPasswordBreaker, algorithmShouldFindOnePassword) {
-  std::vector<std::string> hashedPasswords {"f561aaf6ef0bf14d4208bb46a4ccb3ad",
-        "f0a4058fd33489695d53df156b77c724"};
+  std::vector<std::string> hashedPasswords {"f561aaf6ef0bf14d4208bb46a4ccb3ad","f0a4058fd33489695d53df156b77c724"};
+  
   passwordsSourceMock passwordsSource;
   passwordsOutputMock passwordsOutput;
 
