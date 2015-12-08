@@ -20,13 +20,13 @@ class passwordsSourceMock :public IPasswordsSource {
 };
 
 bool passwordsSourceMock::haveData() {
-  if(i == 0)  return true;
+  if(i < 2)  return true;
   else    return false;
 }
 
 std::string passwordsSourceMock::getPassword() {
   if(i++ == 0)    return "xxx";
-  else    return "yyy";
+  else    return "zzz";
 }
 
 TEST (algorithmPasswordBreaker, algorithmShouldFindOnePassword) {
@@ -37,7 +37,7 @@ TEST (algorithmPasswordBreaker, algorithmShouldFindOnePassword) {
 
   algorithmPasswordBreaker passwordsBreaker(hashedPasswords, passwordsSource, passwordsOutput);
 
-  EXPECT_CALL(passwordsOutput,sendPassword(testing::_))
+  EXPECT_CALL(passwordsOutput,sendPassword("xxx"))
       .Times(1);
   
   passwordsBreaker.run();

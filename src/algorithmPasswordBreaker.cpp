@@ -14,6 +14,6 @@ void algorithmPasswordBreaker::run() {
     bool passwordMatched = outputIter != hashedPasswords.end();
 
     if(passwordMatched)
-      passwordsOutput.sendPassword(*outputIter);
+      passwordsOutput.sendPassword(readedPassword);
   }
 }
