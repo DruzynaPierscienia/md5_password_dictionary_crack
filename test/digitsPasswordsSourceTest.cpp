@@ -20,3 +20,26 @@ TEST (digitsPasswordsSourceTest, PasswordShouldBeCombinationsOfDigits) {
   
   EXPECT_TRUE (passwordContainsOnlyDigits);
 }
+
+TEST (digitsPasswordsSourceTest, CheckingIfNumbersAfterGetPasswordIsDifferent) {
+  digitsPasswordsSource passwordSource;
+
+  auto password1 = passwordSource.getPassword();
+  auto password2 = passwordSource.getPassword();
+
+  EXPECT_TRUE (password1 != password2);
+}
+
+TEST (digitsPasswordsSourceTest, CheckingIfHaveDataIsAlwaysTrue) {
+  digitsPasswordsSource passwordSource;
+
+  auto isThereData = false;
+  
+  for(unsigned int i = 0; i < 10; i++)
+    passwordSource.haveData();
+
+  isThereData = passwordSource.haveData();
+
+  EXPECT_TRUE (isThereData);
+}
+
