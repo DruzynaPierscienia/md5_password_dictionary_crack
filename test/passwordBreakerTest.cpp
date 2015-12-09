@@ -2,8 +2,8 @@
 #include "passwordBreaker.cpp"
 
 TEST (passwordBreakerTest, breakPasswordFunctionShouldBreakThis_ReturnTrue) { 
-  auto passwordToCrack {"some_password_to_crack"};
-  auto hashedPasswordToMatch {"d76178a61618954ebf9670e40bad8e25"};
+  auto passwordToCrack = "some_password_to_crack";
+  auto hashedPasswordToMatch = "d76178a61618954ebf9670e40bad8e25";
   
   passwordBreaker passBreaker;
   auto matchedPassword = passBreaker.breakPassword(passwordToCrack,hashedPasswordToMatch);
@@ -12,8 +12,8 @@ TEST (passwordBreakerTest, breakPasswordFunctionShouldBreakThis_ReturnTrue) {
 }
 
 TEST (passwordBreakerTest, breakPasswordFunctionShouldNotBreakThis_ReturnFalse) { 
-  auto passwordToCrack {"some_other_incorrect_password_to_crack"};
-  auto hashedPasswordToMatch {"d76178a61618954ebf9670e40bad8e25"};
+  auto passwordToCrack = "some_other_incorrect_password_to_crack";
+  auto hashedPasswordToMatch = "d76178a61618954ebf9670e40bad8e25";
   
   passwordBreaker passBreaker;
   auto matchedPassword = passBreaker.breakPassword(passwordToCrack,hashedPasswordToMatch);
