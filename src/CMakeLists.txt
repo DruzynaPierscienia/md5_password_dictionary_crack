@@ -7,6 +7,7 @@ add_library( ${LIBRARY_NAME}
 	     dictionaryPasswordsSource.cpp
 	     md5SumGenerator.cpp
 	     passwordBreaker.cpp
+	     digitsPasswordsSource.cpp
 )
 
 add_executable ( ${PROJ_NAME}

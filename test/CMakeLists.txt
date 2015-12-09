@@ -14,6 +14,7 @@ add_executable( ${PROJ_TEST_NAME}
 		algorithmPasswordBreakerTest.cpp
 		md5SumGeneratorTest.cpp
 		passwordBreakerTest.cpp
+		digitsPasswordsSourceTest.cpp
 		main.cpp
 )
 
