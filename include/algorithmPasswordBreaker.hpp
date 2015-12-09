@@ -12,6 +12,6 @@ class algorithmPasswordBreaker :passwordBreaker {
   IPasswordsSource& passwordsSource;
   IPasswordsOutput& passwordsOutput;
  public:
-  algorithmPasswordBreaker(std::vector<std::string>, IPasswordsSource&, IPasswordsOutput&);
+  algorithmPasswordBreaker(std::vector<std::string> const&, IPasswordsSource&, IPasswordsOutput&);
   void run();
 };

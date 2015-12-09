@@ -1,6 +1,6 @@
 #include "algorithmPasswordBreaker.hpp"
 
-algorithmPasswordBreaker::algorithmPasswordBreaker(std::vector<std::string> passwords, IPasswordsSource& passwordsSourceAlgorithms, IPasswordsOutput& output)
+algorithmPasswordBreaker::algorithmPasswordBreaker(std::vector<std::string> const& passwords, IPasswordsSource& passwordsSourceAlgorithms, IPasswordsOutput& output)
     :passwordBreaker(), hashedPasswords(passwords), passwordsSource(passwordsSourceAlgorithms), passwordsOutput(output) {}
 
 
