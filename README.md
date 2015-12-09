@@ -1,6 +1,6 @@
 ## md5 password cracking program
 
-Project * [Roadmap](https://trello.com/b/90Fdom47/md5passwrodcracker)
+Project [Roadmap](https://trello.com/b/90Fdom47/md5passwrodcracker) in trello organizer.
 
 ### Install libraries:
 ```
