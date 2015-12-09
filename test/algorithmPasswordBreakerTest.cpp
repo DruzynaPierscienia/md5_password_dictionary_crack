@@ -37,7 +37,7 @@ TEST (algorithmPasswordBreaker, algorithmShouldFindOnePassword) {
 
   algorithmPasswordBreaker passwordsBreaker(hashedPasswords, passwordsSource, passwordsOutput);
 
-  EXPECT_CALL(passwordsOutput,sendPassword("xxx"))
+  EXPECT_CALL(passwordsOutput,sendPassword("xxx f561aaf6ef0bf14d4208bb46a4ccb3ad"))
       .Times(1);
   
   passwordsBreaker.run();
