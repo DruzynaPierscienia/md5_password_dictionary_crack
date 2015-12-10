@@ -2,12 +2,12 @@
 #include "lettersConverter.cpp"
 #include <string>
 
-TEST (lettersConverter, FirstLetterShouldBeUpperCase) {
+TEST (lettersConverter, onlyFirstLetterShouldBeUpperCase) {
   lettersConverter converter;
   std::string word("aLa");
   std::string desiredWord("Ala");
   
-  auto resultWord = converter.firstLetterToUpperCase(word);
+  auto resultWord = converter.onlyFirstLetterUpperCase(word);
   
   EXPECT_TRUE (resultWord == desiredWord);
 }
