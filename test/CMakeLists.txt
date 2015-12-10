@@ -23,7 +23,6 @@ target_link_libraries( ${PROJ_TEST_NAME}
 		       ${GTEST_BOTH_LIBRARIES}
 		       ${GMOCK_LIBRARIES}
 		       -lcrypto
-		       -lpthread
 		       -lgtest
 		       -lgmock
 		       -pthread
