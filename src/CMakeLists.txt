@@ -8,6 +8,7 @@ add_library( ${LIBRARY_NAME}
 	     md5SumGenerator.cpp
 	     passwordsMatcher.cpp
 	     digitsPasswordsSource.cpp
+	     lettersConverter.cpp
 )
 
 add_executable ( ${PROJ_NAME}

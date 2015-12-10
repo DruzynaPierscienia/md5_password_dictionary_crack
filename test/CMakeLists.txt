@@ -15,6 +15,7 @@ add_executable( ${PROJ_TEST_NAME}
 		md5SumGeneratorTest.cpp
 		passwordsMatcherTest.cpp
 		digitsPasswordsSourceTest.cpp
+		lettersConverterTest.cpp
 		main.cpp
 )
 
