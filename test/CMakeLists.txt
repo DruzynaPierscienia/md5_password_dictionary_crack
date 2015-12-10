@@ -11,9 +11,9 @@ include_directories( ${CMAKE_SOURCE_DIR}/src
 		    )
 
 add_executable( ${PROJ_TEST_NAME}
-		algorithmPasswordBreakerTest.cpp
+		passwordsBreakerTest.cpp
 		md5SumGeneratorTest.cpp
-		passwordBreakerTest.cpp
+		passwordsMatcherTest.cpp
 		digitsPasswordsSourceTest.cpp
 		main.cpp
 )

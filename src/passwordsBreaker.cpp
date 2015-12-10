@@ -1,15 +1,15 @@
-#include "algorithmPasswordBreaker.hpp"
+#include "passwordsBreaker.hpp"
 
-algorithmPasswordBreaker::algorithmPasswordBreaker(std::vector<std::string> const& passwords, IPasswordsSource& passwordsSourceAlgorithms, IPasswordsOutput& output)
-    :passwordBreaker(), hashedPasswords(passwords), passwordsSource(passwordsSourceAlgorithms), passwordsOutput(output) {}
+passwordsBreaker::passwordsBreaker(std::vector<std::string> const& passwords, IPasswordsSource& passwordsSourceAlgorithms, IPasswordsOutput& output)
+    :passwordsMatcher(), hashedPasswords(passwords), passwordsSource(passwordsSourceAlgorithms), passwordsOutput(output) {}
 
 
-void algorithmPasswordBreaker::run() {
+void passwordsBreaker::run() {
   while( passwordsSource.haveData() ) {
     auto readedPassword = passwordsSource.getPassword();
     auto outputIter = std::find_if(hashedPasswords.begin(),hashedPasswords.end(), [this,&readedPassword](std::string const& hashedPassword)
                                    {
-                                     return passwordBreaker::breakPassword(readedPassword,hashedPassword);
+                                     return passwordsMatcher::matchPassword(readedPassword,hashedPassword);
                                    });
     bool passwordMatched = outputIter != hashedPasswords.end();
 

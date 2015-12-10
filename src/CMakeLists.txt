@@ -3,10 +3,10 @@ include_directories(${CMAKE_SOURCE_DIR}/include)
 set(LIBRARY_NAME md5_library)
 
 add_library( ${LIBRARY_NAME}
-	     algorithmPasswordBreaker.cpp
+	     passwordsBreaker.cpp
 	     dictionaryPasswordsSource.cpp
 	     md5SumGenerator.cpp
-	     passwordBreaker.cpp
+	     passwordsMatcher.cpp
 	     digitsPasswordsSource.cpp
 )
 

@@ -2,16 +2,16 @@
 
 #include "IPasswordsSource.hpp"
 #include "IPasswordsOutput.hpp"
-#include "passwordBreaker.hpp"
+#include "passwordsMatcher.hpp"
 
 #include <vector>
 #include <algorithm>
 
-class algorithmPasswordBreaker :passwordBreaker {
+class passwordsBreaker :passwordsMatcher {
   std::vector<std::string> hashedPasswords;
   IPasswordsSource& passwordsSource;
   IPasswordsOutput& passwordsOutput;
  public:
-  algorithmPasswordBreaker(std::vector<std::string> const&, IPasswordsSource&, IPasswordsOutput&);
+  passwordsBreaker(std::vector<std::string> const&, IPasswordsSource&, IPasswordsOutput&);
   void run();
 };
