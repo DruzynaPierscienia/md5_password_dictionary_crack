@@ -1,9 +1,11 @@
 #include "lettersConverter.hpp"
 
 std::string lettersConverter::firstLetterToUpperCase(std::string word) {
-  std::transform(word.begin(), word.begin()+1, word.begin(), ::toupper);
+  auto lowerCaseWord = everyLetterToLowerCase(word);
+  
+  std::transform(lowerCaseWord.begin(), lowerCaseWord.begin()+1, lowerCaseWord.begin(), ::toupper);
 
-  return word;
+  return lowerCaseWord;
 }
 
 std::string lettersConverter::everyLetterToUpperCase(std::string word) {

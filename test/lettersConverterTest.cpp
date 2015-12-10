@@ -4,7 +4,7 @@
 
 TEST (lettersConverter, FirstLetterShouldBeUpperCase) {
   lettersConverter converter;
-  std::string word("ala");
+  std::string word("aLa");
   std::string desiredWord("Ala");
   
   auto resultWord = converter.firstLetterToUpperCase(word);
@@ -14,7 +14,7 @@ TEST (lettersConverter, FirstLetterShouldBeUpperCase) {
 
 TEST (lettersConverter, EveryLetterShouldBeUpperCase) {
   lettersConverter converter;
-  std::string word("ala");
+  std::string word("aLa");
   std::string desiredWord("ALA");
   
   auto resultWord = converter.everyLetterToUpperCase(word);
@@ -24,7 +24,7 @@ TEST (lettersConverter, EveryLetterShouldBeUpperCase) {
 
 TEST (lettersConverter, EveryLetterShouldBeLowerCase) {
   lettersConverter converter;
-  std::string word("ala");
+  std::string word("aLa");
   std::string desiredWord("ala");
   
   auto resultWord = converter.everyLetterToLowerCase(word);
