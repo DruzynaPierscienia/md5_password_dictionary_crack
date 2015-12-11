@@ -10,6 +10,7 @@ add_library( ${LIBRARY_NAME}
 	     lettersConverter.cpp
 	     screenPrinter.cpp
 	     mergingPasswordsGenerator.cpp
+	     userPasswordsLoader.cpp
 )
 
 add_executable ( ${PROJ_NAME}
