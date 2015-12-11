@@ -7,7 +7,6 @@ add_library( ${LIBRARY_NAME}
 	     dictionaryPasswordsSource.cpp
 	     md5SumGenerator.cpp
 	     passwordsMatcher.cpp
-	     digitsPasswordsSource.cpp
 	     lettersConverter.cpp
 	     screenPrinter.cpp
 	     mergingPasswordsGenerator.cpp
