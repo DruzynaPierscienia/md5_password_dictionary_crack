@@ -2,13 +2,12 @@
 
 #include "IPasswordsSource.hpp"
 #include "dictionaryPasswordsSource.hpp"
-#include "digitsPasswordsSource.hpp"
 
 #include <iostream>
 #include <functional>
 #include <string>
 
-using lambdaType = std::function<std::string>(std::string);
+using lambdaType = std::function<std::string(std::string)>;
 
 class mergingPasswordsGenerator :dictionaryPasswordsSource, IPasswordsSource {
   lambdaType &passwordLetterCaseConverter;

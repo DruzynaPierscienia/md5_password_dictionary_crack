@@ -9,13 +9,13 @@ bool mergingPasswordsGenerator::haveData() {
 
 std::string mergingPasswordsGenerator::getPassword() {
   if(dictionaryPasswordsSource::haveData()) {
-    auto passwordBeforeConversion = dictionaryPasswordsSource::getPassword();
+    std::string passwordBeforeConversion = dictionaryPasswordsSource::getPassword();
     return passwordLetterCaseConverter(passwordBeforeConversion) + std::to_string(numberToMerge);
   }
   else {
-    dictionaryPasswordsSource.clear();
+    dictionaryPasswordsSource::clear();
     numberToMerge++;
-    auto passwordBeforeConversion = dictionaryPasswordsSource::getPassword();
+    std::string passwordBeforeConversion = dictionaryPasswordsSource::getPassword();
     return passwordLetterCaseConverter(passwordBeforeConversion) + std::to_string(numberToMerge);
   }
 }
