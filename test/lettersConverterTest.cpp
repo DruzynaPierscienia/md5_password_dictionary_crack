@@ -3,31 +3,28 @@
 #include <string>
 
 TEST (lettersConverter, onlyFirstLetterShouldBeUpperCase) {
-  lettersConverter converter;
   std::string word("aLa");
   std::string desiredWord("Ala");
   
-  auto resultWord = converter.onlyFirstLetterUpperCase(word);
+  auto resultWord = lettersConverter::onlyFirstLetterUpperCase(word);
   
   EXPECT_TRUE (resultWord == desiredWord);
 }
 
 TEST (lettersConverter, EveryLetterShouldBeUpperCase) {
-  lettersConverter converter;
   std::string word("aLa");
   std::string desiredWord("ALA");
   
-  auto resultWord = converter.everyLetterToUpperCase(word);
+  auto resultWord = lettersConverter::everyLetterToUpperCase(word);
   
   EXPECT_TRUE (resultWord == desiredWord);
 }
 
 TEST (lettersConverter, EveryLetterShouldBeLowerCase) {
-  lettersConverter converter;
   std::string word("aLa");
   std::string desiredWord("ala");
   
-  auto resultWord = converter.everyLetterToLowerCase(word);
+  auto resultWord = lettersConverter::everyLetterToLowerCase(word);
   
   EXPECT_TRUE (resultWord == desiredWord);
 }
