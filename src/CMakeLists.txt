@@ -10,6 +10,7 @@ add_library( ${LIBRARY_NAME}
 	     digitsPasswordsSource.cpp
 	     lettersConverter.cpp
 	     screenPrinter.cpp
+	     mergingPasswordsGenerator.cpp
 )
 
 add_executable ( ${PROJ_NAME}
