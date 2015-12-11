@@ -7,13 +7,13 @@
 #include <functional>
 #include <string>
 
-using lambdaType = std::string (&)(std::string);
+using lambdaType = std::function<std::string(std::string)>;
 
 class mergingPasswordsGenerator :public dictionaryPasswordsSource {
   lambdaType &passwordLetterCaseConverter;
   unsigned int numberToMerge;
  public:
-  mergingPasswordsGenerator(std::string const& fileName, lambdaType &passwordsConverter);
+  mergingPasswordsGenerator(std::string const& fileName, lambdaType passwordsConverter);
   bool haveData();
   std::string getPassword();
 };

@@ -22,21 +22,30 @@ int main() {
   
   std::thread firstUpperThread([&]()
                                {
-                                 mergingPasswordsGenerator generator(dictionaryFileName, lettersConverter::onlyFirstLetterUpperCase);
+                                 mergingPasswordsGenerator generator(dictionaryFileName, [](std::string password)
+                                                                     {
+                                                                       return lettersConverter::onlyFirstLetterUpperCase(password);
+                                                                     });
                                  passwordsBreaker breaker(hashedPasswords, generator, printer);
                                  breaker.run();
                                });
   
   std::thread everyUpperThread([&]()
                                {
-                                 mergingPasswordsGenerator generator(dictionaryFileName, lettersConverter::everyLetterToUpperCase);
+                                 mergingPasswordsGenerator generator(dictionaryFileName, [](std::string password)
+                                                                     {
+                                                                       return lettersConverter::everyLetterToUpperCase(password);
+                                                                     });
                                  passwordsBreaker breaker(hashedPasswords, generator, printer);
                                  breaker.run();
                                });
 
   std::thread everyLowerThread([&]()
                                {
-                                 mergingPasswordsGenerator generator(dictionaryFileName, lettersConverter::everyLetterToUpperCase);
+                                 mergingPasswordsGenerator generator(dictionaryFileName, [](std::string password)
+                                                                     {
+                                                                       return lettersConverter::everyLetterToUpperCase(password);
+                                                                     });
                                  passwordsBreaker breaker(hashedPasswords, generator, printer);
                                  breaker.run();
                                });

@@ -1,6 +1,6 @@
 #include "mergingPasswordsGenerator.hpp"
 
-mergingPasswordsGenerator::mergingPasswordsGenerator(std::string const& fileName, lambdaType &passwordsConverter)
+mergingPasswordsGenerator::mergingPasswordsGenerator(std::string const& fileName, lambdaType passwordsConverter)
     :dictionaryPasswordsSource(fileName), passwordLetterCaseConverter(passwordsConverter), numberToMerge() {}
 
 bool mergingPasswordsGenerator::haveData() {
