@@ -17,7 +17,8 @@ add_executable ( ${PROJ_NAME}
 	       main.cpp )   
 
 target_link_libraries( ${LIBRARY_NAME}
-		       -lcrypto 
+		       -lcrypto
+		       -pthread
 		       )
 		       
 target_link_libraries( ${PROJ_NAME}

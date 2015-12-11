@@ -3,7 +3,7 @@
 #include "IPasswordsSource.hpp"
 #include <fstream>
 
-class dictionaryPasswordsSource :IPasswordsSource {
+class dictionaryPasswordsSource :public IPasswordsSource {
   std::ifstream inputStream;
  public:
   dictionaryPasswordsSource(std::string const& streamFileName);
