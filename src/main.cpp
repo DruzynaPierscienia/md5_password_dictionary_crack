@@ -1,4 +1,3 @@
-#include <iostream>
 #include <thread>
 #include "userPasswordsLoader.hpp"
 #include "mergingPasswordsGenerator.hpp"
@@ -22,7 +21,7 @@ int main() {
   
   std::thread firstUpperThread([&]()
                                {
-                                 mergingPasswordsGenerator generator(dictionaryFileName, [](std::string password)
+                                 mergingPasswordsGenerator generator(dictionaryFileName, [](std::string & password)
                                                                      {
                                                                        return lettersConverter::onlyFirstLetterUpperCase(password);
                                                                      });
@@ -32,7 +31,7 @@ int main() {
   
   std::thread everyUpperThread([&]()
                                {
-                                 mergingPasswordsGenerator generator(dictionaryFileName, [](std::string password)
+                                 mergingPasswordsGenerator generator(dictionaryFileName, [](std::string & password)
                                                                      {
                                                                        return lettersConverter::everyLetterToUpperCase(password);
                                                                      });
@@ -42,7 +41,7 @@ int main() {
 
   std::thread everyLowerThread([&]()
                                {
-                                 mergingPasswordsGenerator generator(dictionaryFileName, [](std::string password)
+                                 mergingPasswordsGenerator generator(dictionaryFileName, [](std::string & password)
                                                                      {
                                                                        return lettersConverter::everyLetterToUpperCase(password);
                                                                      });

@@ -7,7 +7,7 @@
 #include <functional>
 #include <string>
 
-using lambdaType = std::function<std::string(std::string)>;
+using lambdaType = std::function<std::string(std::string&)>;
 
 class mergingPasswordsGenerator :public dictionaryPasswordsSource {
   lambdaType &passwordLetterCaseConverter;
