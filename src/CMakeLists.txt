@@ -9,6 +9,7 @@ add_library( ${LIBRARY_NAME}
 	     passwordsMatcher.cpp
 	     digitsPasswordsSource.cpp
 	     lettersConverter.cpp
+	     screenPrinter.cpp
 )
 
 add_executable ( ${PROJ_NAME}
