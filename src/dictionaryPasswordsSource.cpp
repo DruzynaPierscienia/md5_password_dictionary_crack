@@ -1,10 +1,15 @@
 #include "dictionaryPasswordsSource.hpp"
 
 dictionaryPasswordsSource::dictionaryPasswordsSource(std::string const& streamFileName)
-    :inputStream{streamFileName} {}
+    :inputStream{streamFileName, std::ios::in} {}
 
 bool dictionaryPasswordsSource::haveData() {
     return inputStream.peek() != EOF;
+}
+
+void dictionaryPasswordsSource::clear() {
+  inputStream.clear();
+  inputStream.seekg(std::ios_base::beg);
 }
 
 std::string dictionaryPasswordsSource::getPassword() {
