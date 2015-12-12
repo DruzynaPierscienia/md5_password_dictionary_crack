@@ -11,6 +11,7 @@ add_library( ${LIBRARY_NAME}
 	     screenPrinter.cpp
 	     mergingPasswordsGenerator.cpp
 	     userPasswordsLoader.cpp
+	     randomWordsGenerator.cpp
 )
 
 add_executable ( ${PROJ_NAME}
