@@ -2,12 +2,12 @@
 
 #include "IPasswordsSource.hpp"
 #include "IPasswordsOutput.hpp"
-#include "passwordsMatcher.hpp"
+#include "md5SumGenerator.hpp"
 
 #include <vector>
 #include <algorithm>
 
-class passwordsBreaker :passwordsMatcher {
+class passwordsBreaker :md5SumGenerator {
   std::vector<std::string> hashedPasswords;
   IPasswordsSource& passwordsSource;
   IPasswordsOutput& passwordsOutput;
