@@ -8,7 +8,7 @@ sudo apt-get install libssl-dev cmake
 ```
 
 #### Install gtest:
-```
+```bash
 wget http://googletest.googlecode.com/files/gtest-1.7.0.zip
 unzip gtest-1.7.0.zip
 cd gtest-1.7.0/
