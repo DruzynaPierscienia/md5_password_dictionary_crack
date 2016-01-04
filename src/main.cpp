@@ -5,6 +5,7 @@
 #include "dictionaryPasswordsSource.hpp"
 #include "passwordsBreaker.hpp"
 #include "screenPrinter.hpp"
+#include "signalHandler.hpp"
 
 int main() {
   
@@ -18,6 +19,8 @@ int main() {
   const auto hashedPasswords = passwordsLoader.loadUserPasswords();
 
   screenPrinter printer;
+
+  signal(SIGINT, signalHandler::closeProgram);
   
   std::thread firstUpperThread([&]()
                                {

@@ -12,6 +12,7 @@ add_library( ${LIBRARY_NAME}
 	     mergingPasswordsGenerator.cpp
 	     userPasswordsLoader.cpp
 	     randomWordsGenerator.cpp
+	     signalHandler.cpp
 )
 
 add_executable ( ${PROJ_NAME}
